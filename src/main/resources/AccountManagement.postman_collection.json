@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "9e00464b-5136-4882-9948-aa52d8e57f60",
+		"name": "AccountManagement",
+		"description": "Account Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestAccountController",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				},
+				"description": "TestAccountController"
+			},
+			"response": []
+		},
+		{
+			"name": "GETAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAccount by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update or add account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"accountNumber\": 2,\r\n        \"ifsc\": \"ING002\",\r\n        \"accoutType\": \"savings\",\r\n        \"availableBalance\": 10000.0,\r\n        \"accountStatus\": \"active\",\r\n        \"branch\": \"BTM\",\r\n        \"accountOpenedDate\": 1540060200000,\r\n        \"city\": \"Bangalore\"\r\n }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account?accountNumber%3D3=&ifsc=ING0002&accoutType=Savings&availableBalance=20000&accountStatus=active&branch=BTM&accountOpenedDate=23-04-2018&city=Bangalore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "accountNumber%3D3",
+							"value": ""
+						},
+						{
+							"key": "ifsc",
+							"value": "ING0002"
+						},
+						{
+							"key": "accoutType",
+							"value": "Savings"
+						},
+						{
+							"key": "availableBalance",
+							"value": "20000"
+						},
+						{
+							"key": "accountStatus",
+							"value": "active"
+						},
+						{
+							"key": "branch",
+							"value": "BTM"
+						},
+						{
+							"key": "accountOpenedDate",
+							"value": "23-04-2018"
+						},
+						{
+							"key": "city",
+							"value": "Bangalore"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Add new account test"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
